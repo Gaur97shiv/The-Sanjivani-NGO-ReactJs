@@ -197,3 +197,23 @@
   font-size: 1.4rem;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Big visible logo */
+.top-logo-container img {
+    height: 40px;      /* Reduced height */
+    width: 140px; 
+    object-fit: contain;
+}
+
+/* Keep phone/email aligned */
+.top-bar-left .text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+

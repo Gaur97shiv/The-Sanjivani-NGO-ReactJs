@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import '../css/navbar.css';
+import logo from '../assets/navlogo.jpeg';
+
 
 export default function Navbar() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -40,26 +42,35 @@ export default function Navbar() {
             <div className="top-bar d-none d-md-block">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-8">
-                            <div className="top-bar-left">
-                                <div className="text">
-                                    <i className="fa fa-phone"></i>
-                                    <a href="tel:+91-7385223242"><p>+91-953681808</p></a>
-                                </div>
-                                <div className="text">
-                                    <i className="fa fa-envelope"></i>
-                                    <a href="mailto:sanjivani.vitswd@vit.edu"><p>gmail.com</p></a>
-                                </div>
-                            </div>
-                        </div>
+                      <div className="col-md-8">
+    <div className="top-bar-left">
+
+        {/* NGO Logo */}
+        <div className="top-logo-container">
+            <img src={logo} alt="Navjeevan Nirmaan Sankalp Logo" />
+        </div>
+
+        <div className="text">
+            <i className="fa fa-phone"></i>
+            <a href="tel:+91-953681808"><p>+91-953681808</p></a>
+        </div>
+
+        <div className="text">
+            <i className="fa fa-envelope"></i>
+            <a href="mailto:navjeevannirmaansankalp@gmail.com">
+                <p>navjeevannirmaansankalp@gmail.com</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
                         <div className="col-md-4">
                             <div className="top-bar-right">
                                 <div className="social">
-                                    <a href="https://twitter.com/vit_socials"><i className="fab fa-x-twitter"></i></a>
-                                    <a href="https://www.facebook.com/vitsocials"><i className="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/vitsocials/"><i className="fab fa-instagram"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCJnaNm8Ns08rUIhsdFM2fhA"><i className="fab fa-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/company/vit-social-welfare-development/"><i className="fab fa-linkedin-in"></i></a>
+                                    <a href="https://x.com/navjeevanns?s=11"><i className="fab fa-x-twitter"></i></a>
+                                    <a href="https://www.instagram.com/navjeevan_nirmaan_sankalp_fdn?igsh=MWpqNHJnOHV1YmI2eA=="><i className="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/navjeevannirmaansankalp-foundation-5601b03ab/"><i className="fab fa-linkedin-in"></i></a>
                                 </div>
                                 {auth.length>0 && <button onClick={()=>{(auth==="USER"?localStorage.removeItem("NGO"):localStorage.removeItem("ADMIN_NGO")); setAuth(""); navigate("/");}} type='button' className='btn btn-outline-danger'>LOGOUT {auth}</button>}
                             </div>
