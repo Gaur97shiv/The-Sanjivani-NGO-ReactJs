@@ -6,12 +6,15 @@
     margin-bottom: 0;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)), url(../assets/page-header.jpg);
+    background:
+      linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)),
+      url(../assets/page-header.jpg);
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center 0%;
 }
+
 
 .page-header h2 {
     position: relative;
@@ -85,4 +88,7 @@
     .page-header a {
         font-size: 18px;
     }
+}
+.page-header {
+    background-position: center 20%;
 }
